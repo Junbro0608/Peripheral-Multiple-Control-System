@@ -1,5 +1,4 @@
 # Peripheral-Multiple-Control-System
-# 칩 온 디바이스 AI 최종 프로젝트 (ON DEVICE AI FINAL PROJECT)
 
 Basys3 보드(Xilinx Artix-7, XC7A35T)를 기준으로 설계 및 검증된 다기능 통합 제어 시스템입니다. 하드웨어 물리 입력과 PC의 UART 입력을 하나의 명령 체계로 통합하여, 시계, 스톱워치 및 외부 센서(초음파, 온습도)를 제어하고 결과를 출력합니다.
 
