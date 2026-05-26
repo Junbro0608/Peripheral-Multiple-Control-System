@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="tb_tx_arbiter_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="tb_tx_arbiter" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="254401fs"></ZoomEndTime>
+      <Cursor1Time time="40000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="276"></NameColumnWidth>
+      <ValueColumnWidth column_width="120"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="9" />
+   <wvobject fp_name="/tb_tx_arbiter/iTxBusy" type="logic">
+      <obj_property name="ElementShortName">iTxBusy</obj_property>
+      <obj_property name="ObjectShortName">iTxBusy</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_tx_arbiter/iSenderValid" type="logic">
+      <obj_property name="ElementShortName">iSenderValid</obj_property>
+      <obj_property name="ObjectShortName">iSenderValid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_tx_arbiter/iEchoValid" type="logic">
+      <obj_property name="ElementShortName">iEchoValid</obj_property>
+      <obj_property name="ObjectShortName">iEchoValid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_tx_arbiter/iSenderData" type="array">
+      <obj_property name="ElementShortName">iSenderData[7:0]</obj_property>
+      <obj_property name="ObjectShortName">iSenderData[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_tx_arbiter/iEchoData" type="array">
+      <obj_property name="ElementShortName">iEchoData[7:0]</obj_property>
+      <obj_property name="ObjectShortName">iEchoData[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_tx_arbiter/oTxStart" type="logic">
+      <obj_property name="ElementShortName">oTxStart</obj_property>
+      <obj_property name="ObjectShortName">oTxStart</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_tx_arbiter/oSenderPop" type="logic">
+      <obj_property name="ElementShortName">oSenderPop</obj_property>
+      <obj_property name="ObjectShortName">oSenderPop</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_tx_arbiter/oEchoPop" type="logic">
+      <obj_property name="ElementShortName">oEchoPop</obj_property>
+      <obj_property name="ObjectShortName">oEchoPop</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_tx_arbiter/oTxData" type="array">
+      <obj_property name="ElementShortName">oTxData[7:0]</obj_property>
+      <obj_property name="ObjectShortName">oTxData[7:0]</obj_property>
+   </wvobject>
+</wave_config>

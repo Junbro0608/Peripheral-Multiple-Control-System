@@ -1,0 +1,92 @@
+# =================================================================
+# 🛠️ Vivado & Xilinx Build Artifacts
+# =================================================================
+# 로그 및 실행 기록 파일
+*.log
+*.jou
+*.str
+*.txt
+vivado*.backup.jou
+vivado*.backup.log
+
+# 자동 생성된 프로젝트 및 캐시 디렉토리
+.Xil/
+.cache/
+*.tmp/
+*.hw/
+*.sim/
+*.runs/
+*.ip_user_files/
+
+# 하드웨어 플랫폼 및 익스포트 데이터
+# (보통 .xsa 파일만 관리하고 아래 폴더들은 자동 생성되므로 제외)
+*/hw/
+*/export/
+
+# =================================================================
+# 🧪 Simulation & Waveforms
+# =================================================================
+# 공통 파형 데이터
+*.vcd
+*.wdb
+
+# --- Synopsys VCS & DVE/Verdi ---
+# 컴파일 결과물 및 라이브러리 디렉토리
+csrc/
+simv
+simv.daidir/
+simv.vdb/
+ucli.key
+vc_hdrs.h
+vlogan.log
+vhdlan.log
+
+# Verdi / DVE (디버깅 및 설정 파일)
+*.conf
+*.rc
+VerdiLog/
+Verdi-UltraLog/
+novas.conf
+novas.rc
+*.fsdb
+*.vwf
+
+# =================================================================
+# 🏗️ Build Outputs (컴파일 결과물)
+# =================================================================
+**/Debug/
+**/Release/
+**/obj/
+*.elf
+*.mmi
+*.bit
+*.ba
+*.zip
+**/nul
+
+# =================================================================
+# 💻 IDE & User Specific Settings (Vitis, VS Code, etc.)
+# =================================================================
+# Vitis / Eclipse 메타데이터
+.metadata/
+.plugins/
+RemoteSystemsTempFiles/
+.analytics/
+.canvas/
+
+# 사용자 설정 및 VS Code 관련
+.settings/
+*.user
+.vscode/
+
+# 백업 파일
+*.bak
+
+
+# =================================================================
+# 📂 Exception Rules (예외 규칙)
+# =================================================================
+# 로그 폴더와 그 안의 .log 파일은 형상 관리에 포함함
+!logs/
+!logs/*.log
+
