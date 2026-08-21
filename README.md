@@ -102,23 +102,42 @@ Basys3 하드웨어 입력과 PC UART 입력은 `InputControl` 모듈을 통해 
 ```
 
 ### 5.1 PC to FND
-```text
-[PC UART] -> uart_rx -> ascii_decoder -> InputControl -> ControlUnit -> DisplayMux -> FndController -> [FND]
+```mermaid
+graph TD
+    A[PC UART Input] --> B[UART RX & Decoder<br><code>uart_rx / ascii_decoder</code>]
+    B --> C[Control Core<br><code>InputControl / ControlUnit</code>]
+    C --> D[Display Driver<br><code>DisplayMux / FndController</code>]
+    D --> E[FND Display]
+
 ```
 
 ### 5.2 FPGA to FND
-```text
-[Buttons/Switches] -> INPUTFPGA -> InputControl -> ControlUnit -> DisplayMux -> FndController -> [FND]
+```mermaid
+graph TD
+    A[Buttons / Switches] --> B[FPGA Debouncer<br><code>INPUTFPGA / DebounceWrapper</code>]
+    B --> C[Control Core<br><code>InputControl / ControlUnit</code>]
+    C --> D[Display Driver<br><code>DisplayMux / FndController</code>]
+    D --> E[FND Display]
+
 ```
 
 ### 5.3 PC to PC (상태 조회)
-```text
-[PC UART] -> uart_rx -> ascii_decoder -> InputControl -> ControlUnit -> AsciiSender -> tx_fifo -> tx_arbiter -> uart_tx -> [PC Terminal]
+```mermaid
+graph TD
+    A[PC UART Input] --> B[UART RX & Control<br><code>uart_rx / ascii_decoder / ControlUnit</code>]
+    B --> C[ASCII Formatter<br><code>AsciiSender / tx_fifo</code>]
+    C --> D[TX Arbiter & Transceiver<br><code>tx_arbiter / uart_tx</code>]
+    D --> E[PC Terminal Output]
+
 ```
 
 ### 5.4 LoopBack
-```text
-[PC UART] -> uart_rx -> rx_fifo -> tx_arbiter -> uart_tx -> [PC Terminal]
+```mermaid
+graph TD
+    A[PC UART Input] --> B[RX Buffer<br><code>uart_rx / rx_fifo</code>]
+    B --> C[TX Arbiter & Transceiver<br><code>tx_arbiter / uart_tx</code>]
+    C --> D[PC Terminal Output]
+
 ```
 
 ---
